@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Adding page title -->
+  <title>Henry Nott | Work</title>
+  <!-- Adding favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <!-- Setting characterset to UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Setting page description -->
+  <meta name="description" content="Digital Portfolio by Henry Nott">
+  <!-- Defining key words -->
+  <meta name="keywords" content="Portfolio">
+  <!-- Declaring page author as Henry Nott -->
+  <meta name="author" content="Henry Nott">
+  <!-- Defining the viewport to follow the width of the device and to not zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Linking styles.css CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Linking custom Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chicle|Roboto">
+  <!-- Declaring all page font to be Roboto at weight 100. Further styling for portfolio gallery inserted inline so to not conflict with stylesheet -->
+  <style>
+    * {font-family: "Roboto", sans-serif; font-weight: 100 !important;}
+    /* Defining that the div with class "gallery" should have a 1px border with solid #ccc color */
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+    /* Defining that the div with class "gallery" should have a 1px border with solid #777 color WHEN THE CURSOR IS HOVERING */
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    /* Defining that the image in the div with class "gallery" should have a width 100% of div width and a height automatically responsive to the width and page size */
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    /* Defining that the div with class "desc" should have padding of 15px and text alignment should be center */
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+    /* Defining that all content should include padding and borders within the width and height */
+    * {
+      box-sizing: border-box;
+    }
+    /* Defining that anything with class "responsive" should have padding of 0px top/bottom and 6px left/right, float left (marked important) and a width of 24.99999% (not 25% to fit within page) */
+    .responsive {
+      padding: 0 6px;
+      float: left !important;
+      width: 24.99999%;
+    }
+    /* Defining that all content under a max width of 900px should follow the following CSS rules (tablet view) */
+    @media only screen and (max-width: 900px) {
+      /* Defining that anything with class "responsive" should have a width of 49.99999% (not 50% to fit within page) and a margin of 6px top/bottom and 0px left/right */
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+    /* Defining that all content under a max width of 900px should follow the following CSS rules (mobile view) */
+    @media only screen and (max-width: 600px) {
+      /* Defining that anything with class "responsive" should have a width of 100% */
+      .responsive {
+        width: 100%;
+      }
+    }
+    /* Defining that anything after class "clearfix" not follow content tabulisation or previous content styles */
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <!-- Defining the header div as class 'header' -->
+  <header class="header">
+    <!-- Hyperlinking the homepage to the logo -->
+    <a href="/index.html" class="logo">Henry Nott</a>
+    <!-- Defining checkbox toggle to serve as hamburger menu (mobile view only) -->
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <!-- Defining image as visiual represenation of hamburger menu; Source: Wikimedia (2022) -->
+    <label class="menu-icon" for="menu-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"></label>
+    <!-- Creating table to house navigation menu (full-size and mobile view) -->
+    <ul class="menu">
+      <!-- Defining 3 list items as other pages: 'About', 'Work' and 'Contact', and hyperlinking to respective pages. -->
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <!-- Defining main page content div as "work" -->
+  <div class="work">
+    <!-- Creating subdiv for the page title as 'work-title' -->
+    <div class="work-title">
+    <!-- Writing title in Heading 1 size -->
+    <h1>My Work</h1>
+    </div>
+    <!-- Creating subdiv for text and portfolio gallery -->
+    <div class="work-content">
+      <!-- Writing subheading in Heading 4 size -->
+      <h4>Below are links to specific examples of work I have completed in various areas of digital content and media. Click each box to be taken to a specific example:</h4>
+      <div>
+      <!-- Creating a responsive container div for gallery as class "responsive" -->
+      <div class="responsive">
+        <!-- Defining gallery box subdiv as "gallery" -->
+        <div class="gallery">
+          <!-- Hyperlinking gallery image to opening in new tab, setting alt text and defining image size as 600px wide by 400px high -->
+          <a target="_blank" href="https://vimeo.com/539049687">
+            <img src="video-production.jpeg" alt="Video Production" width="600" height="400">
+          </a>
+          <!-- Creating subdiv for gallery description as class "desc" -->
+          <div class="desc">Video Production</div>
+        </div>
+      </div>
+      <!-- Creating a responsive container div for gallery as class "responsive" -->
+      <div class="responsive">
+        <!-- Defining gallery box subdiv as "gallery" -->
+        <div class="gallery">
+          <!-- Hyperlinking gallery image to opening in new tab, setting alt text and defining image size as 600px wide by 400px high -->
+          <a target="_blank" href="https://www.mcsoxford.org/admissions/getting-to-mcs/">
+            <img src="graphic-design.jpg" alt="Graphic Design" width="600" height="400">
+          </a>
+          <!-- Creating subdiv for gallery description as class "desc" -->
+          <div class="desc">Graphic Design</div>
+        </div>
+      </div>
+      <!-- Creating a responsive container div for gallery as class "responsive" -->
+      <div class="responsive">
+        <!-- Defining gallery box subdiv as "gallery" -->
+        <div class="gallery">
+          <!-- Hyperlinking gallery image to opening in new tab, setting alt text and defining image size as 600px wide by 400px high -->
+          <a target="_blank" href="https://youtu.be/uHJuigpLj2o">
+            <img src="animation.jpeg" alt="Animation" width="600" height="400">
+          </a>
+          <!-- Creating subdiv for gallery description as class "desc" -->
+          <div class="desc">Animation</div>
+        </div>
+      </div>
+      <!-- Creating a responsive container div for gallery as class "responsive" -->
+      <div class="responsive">
+        <!-- Defining gallery box subdiv as "gallery" -->
+        <div class="gallery">
+          <!-- Hyperlinking gallery image to opening in new tab, setting alt text and defining image size as 600px wide by 400px high -->
+          <a target="_blank" href="https://www.goodschoolsguide.co.uk/">
+            <img src="display-advertising.jpg" alt="Display Advertising" width="600" height="400">
+          </a>
+          <!-- Creating subdiv for gallery description as class "desc" -->
+          <div class="desc">Display Advertising</div>
+        </div>
+      </div>
+      <!-- Creating a responsive container div for gallery as class "responsive" -->
+      <div class="responsive">
+        <!-- Defining gallery box subdiv as "gallery" -->
+        <div class="gallery">
+          <!-- Hyperlinking gallery image to opening in new tab, setting alt text and defining image size as 600px wide by 400px high -->
+          <a target="_blank" href="https://web.archive.org/web/20210923061207/https://www.karta-initiative.org/">
+            <img src="web-design.jpg" alt="Web Design" width="600" height="400">
+          </a>
+          <!-- Creating subdiv for gallery description as class "desc" -->
+          <div class="desc">Web Design</div>
+        </div>
+      </div>
+      <!-- Creating a responsive container div for gallery as class "responsive" -->
+      <div class="responsive">
+        <!-- Defining gallery box subdiv as "gallery" -->
+        <div class="gallery">
+          <!-- Hyperlinking gallery image to opening in new tab, setting alt text and defining image size as 600px wide by 400px high -->
+          <a target="_blank" href="https://pixelcarve.com/">
+            <img src="ux-ui-analysis.jpeg" alt="User Experience and User Interface Analysis" width="600" height="400">
+          </a>
+          <!-- Creating subdiv for gallery description as class "desc" -->
+          <div class="desc">UX/UI Analysis</div>
+        </div>
+      </div>
+      <!-- Creating a responsive container div for gallery as class "responsive" -->
+      <div class="responsive">
+        <!-- Defining gallery box subdiv as "gallery" -->
+        <div class="gallery">
+          <!-- Hyperlinking gallery image to opening in new tab (empty link), setting alt text and defining image size as 600px wide by 400px high -->
+          <a target="_blank" href="">
+            <img src="photography.jpg" alt="Photogaphy" width="600" height="400">
+          </a>
+          <!-- Creating subdiv for gallery description as class "desc" -->
+          <div class="desc">Photogaphy</div>
+        </div>
+      </div>
+      <!-- Creating a responsive container div for gallery as class "responsive" -->
+      <div class="responsive">
+        <!-- Defining gallery box subdiv as "gallery" -->
+        <div class="gallery">
+          <!-- Hyperlinking gallery image to opening in new tab, setting alt text and defining image size as 600px wide by 400px high -->
+          <a target="_blank" href="https://twitter.com/MCSOxford">
+            <img src="social-media-management.jpg" alt="Social Media Management" width="600" height="400">
+          </a>
+          <!-- Creating subdiv for gallery description as class "desc" -->
+          <div class="desc">Social Media Management</div>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div>
+      <!-- Creating subdiv for clearfix CSS (see stylesheet) -->
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  </body>

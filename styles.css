@@ -1,0 +1,485 @@
+/*** HEAD STYLES ***/
+/* Defining all Headings 1 size text as 72px and font family 'Chicle' */
+h1 {
+  font-size: 72px;
+  font-family: 'Chicle';
+}
+
+/* Defining all Headings 2 size text as 42px */
+h2 {
+  font-size: 42px;
+}
+
+/* Defining all Headings 3 size text as 28px */
+h3 {
+  font-size: 28px:
+}
+
+/* Defining all Headings 4 size text as 24px */
+h4 {
+  font-size: 24px
+}
+
+/* Defining all paragraph size text as 20px */
+p {
+  font-size: 20px
+}
+
+/* Defining all hyperlinks as color #ec4545 and to have to text decoration (removes underline) */
+a {
+  color: #ec4545;
+  text-decoration: none;
+}
+
+/* Defining all hyperlinks have text decoration underline WHEN CURSOR IS HOVERING */
+a:hover {
+  text-decoration: underline;
+}
+
+/*** BODY STYLES ***/
+/* Defining the height and width of html document is 100% of viewfinder, with no margin or padding */
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/** Header **/
+/* Defining everything class "header" have background color #fff (white), position fixed (stays in same place even if page is scrolled), a width 100% of the div, a 0px margin top and left and a z-index (3D stack) of 1 to bring it to the front of the page */
+.header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* Defining every hyperlink in class "header" to have font family 'Chicle' (changes logo font) */
+.header a {
+  font-family: Chicle;
+}
+/* Defining every uniform list in class "header" to have a margin of 0px, padding of 0px, no list style, overflow hidden and a background color of #fff (white) */
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Defining every hyperlink with a list item within class "header" set display to block, padding 15px top/bottom and 40px left/right, text color #ffffff (white), background color #313639 (off-black), no text decoration (removes underline), font family Roboto, font size 20px and a hover transition time of 300 milliseconds */
+.header li a {
+  display: block;
+  padding: 15px 40px;
+  color: #ffffff;
+  background-color: #313639;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 20px;
+  transition: 300ms;
+  text-decoration: underline transparent;
+}
+
+/* Defining every hyperlink with a list item AND class "menu-btn" within class "header" to set background color to #ec4545 (pastel red) WHEN CURSOR IS HOVERING */
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #ec4545;
+}
+
+/* Defining everything in class "logo" within class "header" to display as block, float content to the left, set font size as 60px, font color as #313639 (off black) and padding as 40px top, left and bottom with 0px right. No text decoration to remove underline. (Changes appearance of logo) */
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 60px;
+  color: #313639;
+  padding: 40px 0px 40px 40px;
+  text-decoration: none;
+}
+
+/* Menu */
+/* Defining everything in class "menu" within class "header" to clear both size to allow other content to float, sets a max height of 0px and a transtion of .2 seconds with ease-out effect */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* Menu Icon */
+/* Defining every image in class "menu-icon" within class "header" to have a height/width of 40px (defines size of hamburger menu) */
+.header .menu-icon img {
+  height: 40px;
+  width: 40px;
+}
+
+/* Defining everything in class "menu-icon" within class "header" to change cursor to a pointer, display inline, float to the right (logo is on the left), have padding of 55px top/bottom 30px left and 0px right and set position relative to other elements */
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 55px 30px 55px 0px;
+  position: relative;
+  user-select: none;
+}
+
+/* Menu Button */
+/* Defining everything in class "menu-btn" within class "header" to not display (hides checkbox toggle for menu in place of icon image) */
+.header .menu-btn {
+  display: none;
+}
+
+/* Defining all siblings of class "menu" within a checked class "menu-btn" in class "header" to have a max height of 240px (stops menu from warping/overflowing) */
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+/* Full-Size Header */
+/* Defining everything flowing this instruction above a minimum width of 900px (for the full size menu) */
+@media (min-width: 900px) {
+  /* Defining all list items within class "header" to float left */
+  .header li {
+    float: left;
+  }
+
+  /* Defining all hyperlinks in list items within class "header" to set padding 60px top/bottom 45px left/right, font size 25px, font color #313639 (off black) and background color to #ffffff (white) */
+  .header li a {
+    padding: 60px 45px;
+    font-size: 25px;
+    color: #313639;
+    background-color: #ffffff;
+  }
+
+  /* Defining all hyperlinks in list items within class "header" to add text decoration underline and background color #ffffff WHEN CURSOR IS HOVERING */
+  .header li a:hover {
+    text-decoration: underline;
+    background-color: #ffffff;
+  }
+
+  /* Defining everything in class "menu" within class "header" to not clear for floats, float right and have no max height (allows for responsive scaling) */
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  /* Defining everything in class "menu-icon" within class "header" to not display (hides hamburger in full size menu) */
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+/** INDEX: Hero Image **/
+
+/* The hero image */
+
+.hero-img {
+  /* Using "linear-gradient" to add a darken background effect to the background image (photography.jpg), making the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("photography.jpg");
+
+  /* Set a height (90% not 100% as there is a 10% gap blow) */
+  height: 90%;
+
+  /* Positioning and centering the background image to scale nicely on all screens, leaving a 10% gap at top to avoid menu getting in the way */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom:0;
+}
+
+/* Placing text in the middle of the image, aligned left */
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 37.5%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Defining all h1 within class "hero-text" to have a bottom margin of 0px */
+.hero-text h1 {
+  margin-bottom: 0px !important;
+}
+
+/* Defining all buttons within class "hero-text" to have: no border, round edges by 4px, no outline, display inline, padding 15px top/bottom 25px left/right, font color #313639 (off black), background color #fff (white), font size 20px, align the text center, change cursor to pointer and set hover transition to 300 milliseconds */
+.hero-text button {
+  border: none;
+  border-radius: 4px;
+  outline: 0;
+  display: inline-block;
+  padding: 15px 25px;
+  color: #313639;
+  background-color: #fff;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+/* Defining all buttons within class "hero-text" to have a background color of #ec4545 (off black) and font color of white WHEN CURSOR IS HOVERING */
+.hero-text button:hover {
+  background-color: #ec4545;
+  color: white !important;
+}
+
+/* Defining all hyperlinks in buttons within class "hero-text" to font color of white and no text decoration (removes underline) WHEN CURSOR IS HOVERING*/
+.hero-text button:hover a {
+  color: white !important;
+  text-decoration: none;
+}
+
+/** ABOUT: About Me **/
+
+/* Background */
+/* Defining everything in class "about" to use background image (Source: Adrien Olichon/Pexels, 2018), set height/width to 100% of div, and center and position as before. Overflow on x axis creates page scroll, margin height 10% to avoid menu */
+.about {
+  background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: scroll;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+}
+
+/* Title */
+/* Defining everything in class "about-title" to have a padding of 10% top 1% right/bottom 5% left, font color white */
+.about-title {
+  padding: 10% 1% 1% 5%;
+  color: white;
+}
+
+/* Defining everything following instruction under width of 600px (mobile view) */
+@media (max-width: 600px) {
+  .about-title {
+    padding: 30% 1% 1% 5%;
+  }
+}
+/* Defining everything following instruction over width of 1900px (large full-screen view) */
+@media (min-width: 1900px) {
+  .about-title {
+    padding: 5% 1% 1% 5%;
+  }
+}
+/* Defining every h1 in class "about-title" to have margin of 10px */
+.about-title h1 {
+  margin: 10px;
+}
+
+/* Content */
+/* Defining everything in class "about-content" to have padding of 0% top/bottom 5% left/right and color white */
+.about-content {
+  padding: 0% 5% 0% 5%;
+  color: white;
+}
+
+/* Defining every h2 in class "about-content" to have margin of 10px top/right/left 20px bottom */
+.about-content h2 {
+  margin: 10px 10px 20px 10px;
+}
+
+/* Defining every paragraph in class "about-content" to have margin of 10px */
+.about-content p {
+  margin: 10px;
+}
+
+/* Defining every image in class "about-content" to have margin of 5px top/bottom/left 15px right (leaves gap to right of image) */
+.about-content img {
+  margin: 5px 15px 5px 5px;
+}
+
+/* Defining everything in class "linkedin-btn" to have left/right padding of 5% */
+.linkedin-btn {
+  padding: 0% 5% 0% 5%;
+}
+
+/* Defining every image in class "linkedin-btn" to have height 60px, margin of 10px and a top margin 4px */
+.linkedin-btn img {
+  height: 60px;
+  margin: 10px;
+  margin-top: 4px;
+}
+
+/* Defining everything in class "cvbtn" to have no border, color white, margin 4%, padding 10px top/bottom 28px left/right, text align center, no text decoration (removes underline), display inline, height 60px (to match LinkedIn button), font size 20px, hover transition of .4 seconds, make cursor a pointer and to float left */
+.cvbtn {
+  border: none;
+  color: white;
+  margin: 4%;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  height: 60px;
+  font-size: 20px;
+  margin: 4px 0px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  float: left;
+}
+
+/* Defining everything in class "btn-styled" to have background color of white, font color black and curve button edges by 4px */
+.btn-styled {
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+}
+
+/* Defining everything in class "cvbtn" to have background color of #ec4545 (pastel red) WHEN CURSOR IS HOVERING */
+.cvbtn:hover {
+  background-color: #ec4545;
+}
+
+/* Defining every hyperlink in class "cvbtn" to have no text decoration (removing underline) and a font color of black */
+.cvbtn a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Defining every hyperlink in class "cvbtn" to have a font color of white WHEN CURSOR IS HOVERING */
+.cvbtn:hover a {
+  color: white;
+}
+
+/** WORK: My Work **/
+
+/* Background */
+/* Defining everything in class "work" to use background image (Source: Adrien Olichon/Pexels, 2018), set height/width to 100% of div, and center and position as before. Overflow on x axis creates page scroll, margin height 10% to avoid menu */
+.work {
+  background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: scroll;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+}
+
+/* Title */
+/* Defining everything in class "work-title" to have padding of 10% top 1% right/bottom 5% left and a font color of white */
+.work-title {
+  padding: 10% 1% 1% 5%;
+  color: white;
+}
+
+/* Defining everything following instruction under width of 600px (mobile view) */
+@media (max-width: 600px) {
+  .work-title {
+    padding: 30% 1% 1% 5%;
+  }
+}
+
+/* Defining everything following instruction over width of 1900px (large full-screen view) */
+@media (min-width: 1900px) {
+  .work-title {
+    padding: 5% 1% 1% 5%;
+  }
+}
+
+/* Defining every h1 in class "work-title" to have margin of 10px */
+.work-title h1 {
+  margin: 10px;
+}
+
+/* Content */
+
+/* Defining everything in class "work-content" to have padding of 0% top/bottom 5% right/left and a font color of white */
+.work-content {
+  padding: 0% 5% 0% 5%;
+  color: white;
+}
+
+/* Defining every h2 in class "work-content" to have a margin of 10px top/left 0px right 20px bottom */
+.work-content h2 {
+  margin: 10px 0px 20px 10px;
+}
+
+/* Defining every paragraph in class "work-content" to have a margin of 10px */
+.work-content p {
+  margin: 10px;
+}
+
+/** CONTACT: Contact Me **/
+
+/* Background */
+/* Defining everything in class "contact" to use background image (Source: Adrien Olichon/Pexels, 2018), set height/width to 100% of div, and center and position as before. Overflow on x axis creates page scroll, margin height 10% to avoid menu */
+.contact {
+  background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: scroll;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+}
+
+/* Title */
+/* Defining everything in class "contact-title" to have padding of 10% top 1% right/bottom 5% left and a font color of white */
+.contact-title {
+  padding: 10% 1% 1% 5%;
+  color: white;
+}
+
+/* Defining everything following instruction under width of 600px (mobile view) */
+@media (max-width: 600px) {
+  .contact-title {
+    padding: 30% 1% 1% 5%;
+  }
+}
+
+/* Defining everything following instruction over width of 1900px (large full-screen view) */
+@media (min-width: 1900px) {
+  .contact-title {
+    padding: 5% 1% 1% 5%;
+  }
+}
+
+/* Defining every h1 in class "contact-title" to have margin of 10px */
+.contact-title h1 {
+  margin: 10px;
+}
+
+/* Content */
+/* Defining everything in class "contact-content" to have padding of 0% top/bottom 5% right/left and a font color of white */
+.contact-content {
+  padding: 0% 5% 0% 5%;
+  color: white;
+}
+
+/* Defining every h2 in class "contact-content" to have a margin of 10px top/left 0px right 20px bottom */
+.contact-content h2 {
+  margin: 10px 10px 20px 10px;
+}
+
+/* Defining every paragraph in class "contact-content" to have a margin of 10px */
+.contact-content p {
+  margin: 10px;
+}
+
+/* Defining everything in class "linkedin-btn2" to have padding of 0% top/bottom 5% right 0.4% left */
+.linkedin-btn2 {
+  padding: 0% 5% 0% 0.4%;
+}
+
+/* Defining every image in class "linkedin-btn2" to have height of 50px */
+.linkedin-btn2 img {
+  height: 50px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Adding page title -->
+  <title>Henry Nott | About</title>
+  <!-- Adding favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <!-- Setting characterset to UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Setting page description -->
+  <meta name="description" content="Digital Portfolio by Henry Nott">
+  <!-- Defining key words -->
+  <meta name="keywords" content="Portfolio">
+  <!-- Declaring page author as Henry Nott -->
+  <meta name="author" content="Henry Nott">
+  <!-- Defining the viewport to follow the width of the device and to not zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Linking styles.css CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Linking custom Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chicle|Roboto">
+  <!-- Declaring all page font to be Roboto at weight 100 -->
+  <style>
+    * {font-family: "Roboto", sans-serif; font-weight: 100 !important;}
+  </style>
+</head>
+<body>
+  <!-- Defining the header div as class 'header' -->
+  <header class="header">
+    <!-- Hyperlinking the homepage to the logo -->
+    <a href="/index.html" class="logo">Henry Nott</a>
+    <!-- Defining checkbox toggle to serve as hamburger menu (mobile view only) -->
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <!-- Defining image as visiual represenation of hamburger menu; Source: Wikimedia (2022) -->
+    <label class="menu-icon" for="menu-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"></label>
+    <!-- Creating table to house navigation menu (full-size and mobile view) -->
+    <ul class="menu">
+      <!-- Defining 3 list items as other pages: 'About', 'Work' and 'Contact', and hyperlinking to respective pages. -->
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <!-- Creating main page content div 'About' -->
+  <div class="about">
+    <!-- Defining subdiv for the page title as 'about-title' -->
+    <div class="about-title">
+    <!-- Writing page title in Heading 1 size -->
+    <h1>About Me</h1>
+    </div>
+      <!-- Defining subdiv for the text and button as 'about-content' -->
+      <div class="about-content">
+      <!-- Writing page subheading in Heading 2 size -->
+      <h2>Biography</h2>
+        <!-- Inserting profile image of myself, setting alt text as 'Henry Nott, defining width as '400px' and height as 'auto' (to be responsive to page size and width) and aligning the image to the left. -->
+        <img src="profile.jpg" alt="Henry Nott" width="400px" height="auto" align="left">
+        <!-- Writing text in paragraph size, clearing the left side using breaks to allow profile image (above) to position to the left of the text -->
+        <p>Hi, I'm Henry, I am a digital creative with four years of experience in the marketing industry. I've had experience working on a wide variety of projects, such as <i>video production, graphics design, animation, display advertsting, website design</i> and<i> UX/UI analysis.</i><br><br>Since a young age, I have been fascinated by the impact of branding, the way in which products are marketed and how digital content influences our commercial behaviour.  Whether that be cartoon characters on cereal boxes, social media and television advertising or an instantly recognisable font or typeface, recognisable visual elements always heighten the intrinsic value of the products that they are representing.<br><br>This website is acts as a digital portfolio to showcase my work. Visit the <a href="work.html">work</a> page to see specific examples of my work or contact me using the information below:<br clear="left">
+      </div>
+      <br>
+    <!-- Defining div for LinkedIn button -->
+    <div class="linkedin-btn">
+      <!-- Inserting hyperlink to my LinkedIn page over LinkedIn button image; Source: Action Employment (2022) -->
+      <a href="https://www.linkedin.com/in/henry-nott/"><img src="https://actionemployment.net/wp-content/uploads/2017/08/view-my-linkedin-profile.png" alt="View my LinkedIn profile"></a>
+      <!-- Creating button for CV download, hyperlinking CV.pdf file set to open in a new tab and force download. -->
+      <button class="cvbtn btn-styled"><a href="CV.pdf" target="_blank" download>Download CV</a></button>
+    </div>
+ </div>
+</body>

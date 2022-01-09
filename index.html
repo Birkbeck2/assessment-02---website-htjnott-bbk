@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Adding page title -->
+  <title>Henry Nott | Portfolio Webpage</title>
+  <!-- Adding favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <!-- Setting characterset to UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Setting page description -->
+  <meta name="description" content="Digital Portfolio by Henry Nott">
+  <!-- Defining key words -->
+  <meta name="keywords" content="Portfolio">
+  <!-- Declaring page author as Henry Nott -->
+  <meta name="author" content="Henry Nott">
+  <!-- Defining the viewport to follow the width of the device and to not zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Linking styles.css CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Linking custom Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chicle|Roboto">
+  <!-- Declaring all page font to be Roboto at weight 100 -->
+  <style>
+    * {font-family: "Roboto", sans-serif; font-weight: 100 !important;}
+  </style>
+</head>
+<body>
+  <!-- Defining the header div as class 'header' -->
+  <header class="header">
+    <!-- Hyperlinking the homepage to the logo -->
+    <a href="/index.html" class="logo">Henry Nott</a>
+    <!-- Defining checkbox toggle to serve as hamburger menu (mobile view only) -->
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <!-- Defining image as visiual represenation of hamburger menu; Source: Wikimedia (2022) -->
+    <label class="menu-icon" for="menu-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"></label>
+    <!-- Creating table to house navigation menu (full-size and mobile view) -->
+    <ul class="menu">
+      <!-- Defining 3 list items as other pages: 'About', 'Work' and 'Contact', and hyperlinking to respective pages. -->
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </header>
+<!-- Defining main hero image div as 'hero-img' -->
+<div class="hero-img">
+  <!-- Defining overlay text hero image text div as 'hero-text' -->
+  <div class="hero-text">
+    <!-- Writing title in Heading 1 size -->
+    <h1>A Broad Digital Portfolio</h1>
+    <!-- Writing text in standard paragraph size -->
+    <p>Video Production, Graphic Design, Web Design & More</p>
+    <!-- Defining button and labelling it with 'See my work' -->
+    <button><a href="/work.html" target="_blank">See my work</a></button>
+  </div>
+</div>
+</body>
